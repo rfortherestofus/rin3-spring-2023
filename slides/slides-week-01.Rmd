@@ -286,7 +286,7 @@ https://rfortherestofus.com/code-of-conduct/
 
 --
 
-1. [Course materials](https://rfortherestofus.com/courses/r-in-3-months-fall-2022/)
+1. [Course materials](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/)
 
 --
 
@@ -315,7 +315,7 @@ https://rfortherestofus.com/code-of-conduct/
 
 ## Course Materials
 
-[![](images/rin3-course-page.png)](https://rfortherestofus.com/courses/r-in-3-months-fall-2022/)
+[![](images/rin3-course-page.png)](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/)
 
 
 

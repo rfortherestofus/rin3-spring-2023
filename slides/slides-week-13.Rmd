@@ -387,7 +387,7 @@ class: inverse, center, middle
 
 --
 
-We'd also like to ask you to record a ~5min video with [loom.com](https://loom.com) about something you've learned thanks to R in 3 Months and submit it on the [final project submission page](https://rfortherestofus.com/courses/r-in-3-months-fall-2022/lessons/rin3-fall-2022-final-project/).
+We'd also like to ask you to record a ~5min video with [loom.com](https://loom.com) about something you've learned thanks to R in 3 Months and submit it on the [final project submission page](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/rin3-spring-2023-final-project/).
 
 
 ---
