@@ -1,0 +1,35 @@
+---
+title: "Penguins Report"
+output: html_document
+params:
+  species: "Chinstrap"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(scales)
+```
+
+```{r}
+penguins_filtered <- penguins %>% 
+  filter(species == params$species)
+```
+
+
+```{r}
+penguins_filtered %>% 
+  ggplot(aes(x = bill_length_mm,
+             y = bill_depth_mm)) +
+  geom_point() +
+  theme_minimal()
+```
+

@@ -1,0 +1,249 @@
+---
+title: "R in 3 Months<br>Week 8<br>More Data Tidying"
+output:
+  xaringan::moon_reader:
+    css: ["style.css", "default"]
+    lib_dir: libs
+    df_print: paged
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=FALSE, eval = TRUE}
+options(htmltools.preserve.raw = FALSE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(fivethirtyeight)
+library(here)
+library(gapminder)
+library(patchwork)
+library(tweetrmd)
+```
+
+
+<!---- PLAN
+
+Other types of tidy data - surveys! separate()
+
+- Compare SurveyMonkey & Qualtric which make multiple columns, vs Google Form uses one column
+--- Make a thread comparing 
+
+
+--->
+
+# Agenda
+
+--
+
+1. Housekeeping
+
+--
+
+1. One tip
+
+--
+
+1. Other functions for tidying data
+
+--
+
+1. David and Charlie tidy survey data
+
+--
+
+1. Next week
+
+---
+
+# Housekeeping
+
+
+---
+
+class: inverse, center, middle
+
+# One tip
+
+---
+
+## pivot_longer() complains it can't combine
+
+Often you'll see this error:
+
+```{r}
+# Error in `pivot_longer_spec()`:
+#
+# ! Can't combine `ACO1` <double> and `ACO13` <character>.
+# Run `rlang::last_error()` to see where the error occurred.
+```
+
+Let's walk through an example
+
+---
+
+## pivot_longer() complains it can't combine
+
+We want to combine together all of the columns from `ACO1:ACO28`
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+data_performance <- read_csv(here::here("data", "Performance_Year_Financial_and_Quality_Results_2020.csv")) %>% 
+  select(contains(c("ACO"))) %>% 
+  mutate(across(ACO1:ACO28,
+                ~  ifelse(.x %in% c("^", "~", "-"), 0, .x))) 
+data_performance
+```
+
+
+---
+class: inverse, center, middle
+
+# Other functions for tidying data
+
+---
+
+## separate()
+
+The `separate()` function is useful when a column contains **multiple variables**.
+
+```{r, eval=TRUE}
+location_data <- tribble(
+  ~id, ~address,
+  1, "Las Vegas, USA",
+  2, "Bristol, UK",
+  3, "Kassala, Sudan"
+)
+location_data
+```
+
+
+---
+
+## separate()
+
+```{r, eval=TRUE}
+location_data %>% 
+  separate(col = address,
+           into = c("city",
+                    "country"),
+           sep = ", ")
+```
+
+---
+
+## separate_rows()
+
+The `separate_rows()` function is useful when a column contains **multiple observations of the same variable**.
+
+---
+
+## separate_rows()
+
+Which of these devices do you own? Please select all that apply.
+
+--
+
+```{r, eval=TRUE, echo=TRUE}
+device_ownership <- tribble(
+  ~name, ~devices_owned,
+  "Charlie", "Smart TV, Cell phone",
+  "Mohammad", "Cell phone",
+  "Christina", "Smart TV, Games Console, Cell phone"
+)
+device_ownership
+```
+
+---
+
+## separate_rows()
+
+```{r, eval=TRUE, echo=TRUE}
+device_ownership %>% 
+  separate_rows(devices_owned,
+                sep = ", ")
+```
+
+---
+
+## Tidy data definition
+
+--
+
+1. Every column is a variable.
+
+--
+
+1. Every row is an observation.
+
+--
+
+1. Every cell is a single value.
+
+
+---
+
+class: inverse, center, middle
+
+# Multiple choice survey questions
+
+---
+
+class: middle
+
+```{r echo = FALSE}
+tweet_embed("https://twitter.com/charliejhadley/status/1519696924328214528",
+            align = "center")
+```
+
+---
+
+# Let's tidy the survey data!
+
+David and I will take turns to read in and tidy the survey data from:
+
+- Survey Monkey
+
+- Qualtrics
+
+- Google Forms
+
+---
+
+class: inverse, center, middle
+
+# User-defined functions
+
+---
+
+# User-defined functions
+
+During this week's videos you learned about creating user-defined functions.
+
+This is a really powerful part of learning a programming language like R. They allow you to re-use code to do multiple things, including:
+
+- Clean data files that share the same format (eg yearly reports)
+
+- Create data visualisations of different subsets of your data, eg a line chart showing visitor numbers for each exhibit
+
+- Generate the same report - including lots of different kinds of charts and tables - different subsets of data. This is something we do in consulting projects, eg for [ORS Impact Reports](https://funderscommittee.org/2020censusstatereports/).
+
+---
+
+class: inverse, center, middle
+
+# Next Week
+
+---
+
+# Next week
+
+- Advanced data visualisation with {ggplot2}, including using {ggtext} for direct labelling
+
+- No new project assignment
+
+- The week of Monday 21st November is another catch-up week
