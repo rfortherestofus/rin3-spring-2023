@@ -20,7 +20,7 @@ Here are some links you’ll use throughout our time together:
 
 - Live sessions will happen Wednesdays at 10am Pacific time. [You can
   join the Zoom call with this
-  link](https://us02web.zoom.us/j/86453661896?pwd=VWN3VVVqenJpU1BzSUo3b3Zpd2N4UT09 "Opens in a new window").
+  link](https://us02web.zoom.us/j/86467058641?pwd=di90RHNoV3ZkOTUvN0phMmhCcUxyQT09 "Opens in a new window").
 
 - Charlie will hold office hours Tuesdays at 12pm Pacific time for the
   first 6 weeks of the course. [You can join with this
