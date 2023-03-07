@@ -16,7 +16,7 @@ website](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/).
 Here are some links you’ll use throughout our time together:
 
 - A list of all participants can be found
-  [here](https://docs.google.com/spreadsheets/d/1lD5SgbdG24HfV4Glo80u7j7I3o-XpRJESYcQ50eXbEc/edit?usp=sharing "Opens in a new window").
+  [here](https://docs.google.com/spreadsheets/d/10eDA3Uc-qixEhgMKAGeH9izlF38bfxue8D05aJeUCXE/edit?usp=sharing "Opens in a new window").
 
 - Live sessions will happen Wednesdays at 10am Pacific time. [You can
   join the Zoom call with this
