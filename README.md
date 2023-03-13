@@ -24,7 +24,7 @@ Here are some links you’ll use throughout our time together:
 
 - Charlie will hold office hours Tuesdays at 12pm Pacific time for the
   first 6 weeks of the course. [You can join with this
-  link](https://us02web.zoom.us/j/85743952145?pwd=eXBRNXBCRDNhUU9STXVYWW5NT29SQT09 "Opens in a new window").
+  link](https://us02web.zoom.us/j/89348579518?pwd=b1UvamxtdjNvYktWbWxhQ2c0ckFKdz09 "Opens in a new window").
 
 <hr>
 
