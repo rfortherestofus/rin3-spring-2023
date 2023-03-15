@@ -106,7 +106,7 @@ class: center, middle, inverse
 
 ---
 
-### Where are you from?
+### Where are You From?
 
 ```{r, echo=FALSE, eval=TRUE}
 participants_2023_spring <- read_sheet("https://docs.google.com/spreadsheets/d/10eDA3Uc-qixEhgMKAGeH9izlF38bfxue8D05aJeUCXE/edit#gid=0") %>% 
@@ -142,7 +142,7 @@ ggsave(here::here("slides", "images", "map-students.png"),
 
 ---
 
-### How often have folks used R so far?
+### How Often Have You Used R??
 
 ```{r, eval=TRUE, echo=FALSE}
 pre_survey <- read_sheet("https://docs.google.com/spreadsheets/d/19Ny92IGg0ZzIqiLs7QywaGF-Y85HQZn1iIIXN4I_tpg/edit?resourcekey#gid=1201619159") %>% 
@@ -176,7 +176,36 @@ pre_survey_fall_2023 %>%
 
 ---
 
-### Expertise with using R for dataviz
+### Expertise with R for Data Analysis
+
+```{r, eval=TRUE, echo=FALSE, fig.width=12, fig.height=4, dpi=300}
+data_analysis_expertise <- pre_survey_fall_2023 %>% 
+  select(how_would_you_rate_your_level_of_expertise_working_with_r_for_data_analysis) %>% 
+  count(how_would_you_rate_your_level_of_expertise_working_with_r_for_data_analysis) %>%
+  rename(data_analysis_expertise = how_would_you_rate_your_level_of_expertise_working_with_r_for_data_analysis) %>% 
+  right_join(tibble(data_analysis_expertise = 1:10)) %>% 
+  mutate(data_analysis_expertise = as.character(data_analysis_expertise)) %>% 
+  mutate(data_analysis_expertise = fct_relevel(data_analysis_expertise, as.character(1:10))) %>% 
+  mutate(data_analysis_expertise = fct_recode(data_analysis_expertise, "1\nNovice" = "1", "10\nExpert" = "10"))
+
+data_analysis_expertise %>% 
+  ggplot(aes(y = n,
+             x = data_analysis_expertise)) +
+  geom_col(fill = "#6cabdd") +
+  scale_y_continuous(breaks = pretty_breaks(3)) +
+  labs(title = "How would you rate your level of expertise with using R for data analysis?",
+       y = "",
+       x = "") +
+  theme_ipsum(base_family = "Inter Regular") +
+  theme(axis.text.x = element_text(face = "bold"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.y = element_blank())
+```
+
+
+---
+
+### Expertise with R for Data Viz
 
 ```{r, eval=TRUE, echo=FALSE, fig.width=12, fig.height=4, dpi=300}
 data_viz_expertise <- pre_survey_fall_2023 %>% 
@@ -193,7 +222,7 @@ data_viz_expertise %>%
              x = data_viz_expertise)) +
   geom_col(fill = "#6cabdd") +
   scale_y_continuous(breaks = pretty_breaks(3)) +
-  labs(title = "How would you rate your level of expertise with using R for Data Viz?",
+  labs(title = "How would you rate your level of expertise with using R for data viz?",
        y = "",
        x = "") +
   theme_ipsum(base_family = "Inter Regular") +
