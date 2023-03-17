@@ -42,11 +42,11 @@ world_sf <- countries110 %>%
 
 --
 
-1. Logistics
+1. Introduction
 
 --
 
-1. Weekly Plan
+1. How R in 3 Months Works
 
 --
 
@@ -291,117 +291,15 @@ Share with the people in your breakout room:
 
 class: center, middle, inverse
 
-# Logistics
+# How R in 3 Months Works
 
----
-
-## Code of Conduct
-
-[![](images/code-of-conduct.png)](https://rfortherestofus.com/code-of-conduct/)
-???
-
-https://rfortherestofus.com/code-of-conduct/
-
----
-
-## All of the Pieces
-
---
-
-1. Live sessions Wednesdays at 10am Pacific
-
---
-
-1. Drop-in Sessions / Office hours Tuesdays at 12pm Pacific
-
---
-
-1. [Course materials](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/)
-
---
-
-1. Course assignments
-
---
-
-1. Project assignments
-
---
-
-1. [Google Sheet with contact information etc](https://docs.google.com/spreadsheets/d/10eDA3Uc-qixEhgMKAGeH9izlF38bfxue8D05aJeUCXE/edit?usp=sharing)
-
-
-
-
-
-
----
-
-## Google Sheet with Contact Info etc
-
-[![](images/rin3-google-sheet.png)](https://docs.google.com/spreadsheets/d/10eDA3Uc-qixEhgMKAGeH9izlF38bfxue8D05aJeUCXE/edit?usp=sharing)
-
----
-
-## Course Materials
-
-[![](images/rin3-course-page.png)](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/)
-
-
-
----
-
-## Project Assignments
-
---
-
-- Something you will work on throughout the three months we work together
-
---
-
-- Can be something you're working on now or something you've done before
-
---
-
-- To apply what your learn to your project you **will need a dataset that you can share with us**.
-
---
-
-- Best if you have some "final report" you can work toward at the end of our 3 months together
-
-
----
-
-## Advice on project datasets
-
-If you can't share your datasets (or don't have any) you could try looking at [Tidy Tuesday datasets](https://github.com/rfordatascience/tidytuesday).
-
-There are also some good datasets collected by Vincent Arel-Bundock [here](https://vincentarelbundock.github.io/Rdatasets/articles/data.html)
-
-???
-
-Get Charlie to chime in on ideas for data etc
-
----
-
-## Project Assignment Feedback
-
-You'll share progress most weeks and get feedback videos from Charlie
-
-???
-
-Explain motivation
-
----
-
-## Project Assignment Submission
-
-![](images/rin3-project-assignment.png)
 ---
 
 ## Live Sessions
 
-[Wednesdays at 10:00am Pacific time](https://us02web.zoom.us/j/86467058641?pwd=di90RHNoV3ZkOTUvN0phMmhCcUxyQT09)
+--
+
+Wednesdays from 10:00am - 11:00am Pacific time
 
 --
 
@@ -423,12 +321,104 @@ Explain motivation
 
 Sessions will be recorded and made available within 24 hours
 
+---
+
+## Follow-Up Email
+
+Follow-Up email recapping live session will go out by Thursday
+
+---
+
+## Course Assignments
+
+Done on your own time
+
+---
+
+## Course Assignments
+
+[![](images/rin3-course-page.png)](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/)
+
+
+
+---
+
+
+## Project Assignments
+
+--
+
+- Done on your own time
+
+--
+
+- Something you will work on throughout the three months we work together
+
+--
+
+- Can be something you're working on now or something you've done before
+
+--
+
+- To apply what your learn to your project you **will need a dataset that you can share with us**.
+
+--
+
+- Best if you have some "final report" you can work toward at the end of our 3 months together
+
+---
+
+## Project Assignments
+
+![](images/project-assignment.png)
+
+
+---
+
+## Project Assignments
+
+![](images/project-assignment-form.png)
+
+
+---
+
+## Advice on project datasets
+
+If you can't share your datasets (or don't have any) you could try looking at [Tidy Tuesday datasets](https://github.com/rfordatascience/tidytuesday).
+
+There are also some good datasets collected by Vincent Arel-Bundock [here](https://vincentarelbundock.github.io/Rdatasets/articles/data.html)
+
+???
+
+Get Charlie to chime in on ideas for data etc
+
+
+---
+
+## Project Assignment Feedback
+
+After you submit project assignments, Charlie review them and provide you feedback.
+
+--
+
+You'll get notified by email when feedback is available.
+
+--
+
+![](images/feedback-example.png)
+
+
+---
+
+## Reminder Email
+
+Email reminding you of what you're working on this week will go out on Monday
 
 ---
 
 ## Drop-in Sessions / Office Hours
 
-[Tuesdays at 12:00PM Pacific time](https://us02web.zoom.us/j/89348579518?pwd=b1UvamxtdjNvYktWbWxhQ2c0ckFKdz09)
+Tuesdays at 12:00PM Pacific time
 
 --
 
@@ -438,47 +428,42 @@ Sessions will be recorded and made available within 24 hours
 
 - They will be recorded and made available
 
----
-
-class: inverse, center, middle
-
-# Weekly Plan
 
 ---
 
-.pull-left[
+class: center, middle, inverse
 
-## Wednesday
+# Additional Pieces
 
-- Live session
+---
 
-## Thursday
+## Google Sheet with Contact Info etc
 
-- Live session video posted
+[![](images/rin3-google-sheet.png)](https://docs.google.com/spreadsheets/d/10eDA3Uc-qixEhgMKAGeH9izlF38bfxue8D05aJeUCXE/edit?usp=sharing)
 
-- Summary email sent out
-
-]
+---
 
 
-.pull-right[
+## Code of Conduct
+
+[![](images/code-of-conduct.png)](https://rfortherestofus.com/code-of-conduct/)
+
+???
+
+https://rfortherestofus.com/code-of-conduct/
 
 
-## Monday
+---
 
-- Reminder email sent out 
+## Where to Ask Questions
 
-## Tuesday
+--
 
-- Office hours 12:00pm Pacific time
+- If you have questions specific to lessons, post them below the lesson
 
-- Complete lessons and post any questions
+--
 
-- Complete project assignment
-
-]
-
-
+- If you have more general questions, email David and Charlie and we'll create additional lessons to answer your questions
 
 ---
 
@@ -517,11 +502,7 @@ https://book.rwithoutstatistics.com/rmarkdown-chapter.html
 
 ## Course Assignment
 
-- If you have questions specific to the lesson, post them below the lesson
-
---
-
-- If you have more general questions, email David and Charlie and we'll create additional lessons to answer your questions
+Learn about RMarkdown
 
 ---
 
