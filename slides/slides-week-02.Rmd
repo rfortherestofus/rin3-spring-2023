@@ -58,7 +58,7 @@ You should be getting emails when we post feedback
 
 --
 
-You can see everyone's feedback here: https://rfortherestofus.com/r-in-3-months-feedback-spring-2023/
+You can see everyone's feedback [here](https://rfortherestofus.com/r-in-3-months-feedback-spring-2023/) 
 
 ???
 
@@ -70,7 +70,7 @@ You can see everyone's feedback here: https://rfortherestofus.com/r-in-3-months-
 
 class: inverse, center, middle
 
-## Common Issues with RMarkdown
+# Common Issues with RMarkdown
 
 
 ---
@@ -168,11 +168,31 @@ There's a [new lesson about CSS and reference documents](https://rfortherestofus
 
 ---
 
+### How to preview your knitted documents
+
+![](images/preview-rmd.png)
+
+
+---
+
 ### References and citations in RMarkdown
 
 We had several folks make use of BibTeX for inserting references and citations into their documents.
 
-This is something Charlie is very passionate about so she's added a lesson to the course that she recorded a few years ago - https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/bibliographies-and-formatting-references/.
+This is something Charlie is very passionate about so she's added a lesson to the course that she recorded a [few years ago](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/bibliographies-and-formatting-references/)
+
+---
+
+### Links
+
+```{verbatim}
+This is something Charlie is very passionate about so she's added a lesson to the course that she recorded a [few years ago](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/bibliographies-and-formatting-references/)
+```
+
+--
+
+This is something Charlie is very passionate about so she's added a lesson to the course that she recorded a [few years ago](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/bibliographies-and-formatting-references/)
+
 
 ---
 
@@ -276,19 +296,6 @@ At the bottom of the document is a button that allows you to navigate through th
 <img src='images/rmd-overview.png'/>
 ]
 
----
-
-### Best practices: obtaining data from the web
-
-The most reproducible way to work with data from the web is to write a separate R script to download the file to your project.
-
-Your RMarkdown document can then read in the *local* version of the file.
-
-### But!!
-
---
-
-This is only good advice if your data file doesn't change over time.
 
 ---
 
@@ -391,9 +398,7 @@ class: inverse, center, middle
 
 Quarto is a new technology that will be the future of RMarkdown.
 
-It's not **quite** stable enough for us to switch our teaching materials from RMarkdown to Quarto.
-
-> And RMarkdown is **not** going away. RMarkdown will continue to be supported and developed into the future.
+And RMarkdown is **not** going away. RMarkdown will continue to be supported and developed into the future.
 
 ]
 
@@ -412,7 +417,7 @@ RMarkdown is quite limited in that it's only useful for folks in the R community
 
 Quarto is designed from the ground up to work for R, Python and Julia users.
 
-It's very exciting - but we feel it's worthwhile having some caution about learning it right now.
+It's very exciting, but don't feel like you have to drop RMarkdown yet.
 ]
 
 .pull-right[
@@ -458,27 +463,6 @@ rep("lots of cats", 5)
 ]
 
 
----
-
-## ... oh, and about RStudio
-
-.pull-left[
-
-RStudio have also rebranded themselves to Posit.
-
-This is because they want to add other people to our community who don't use R.
-
-- The RStudio application is not changing name
-
-- Posit are dedicated to the R community!!
-
-]
-
-.pull-right[
-<img src='images/posit.png'/>
-
-]
-
 
 ---
 
@@ -495,6 +479,10 @@ class: inverse, center, middle
 --
 
 1. Do some simple data analysis using your data and add it to your report
+
+--
+
+1. Make sure you are working in an RStudio project!
 
 --
 
