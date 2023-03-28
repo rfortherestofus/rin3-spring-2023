@@ -65,6 +65,15 @@ library(janitor)
 
 - Catch-up weeks
 
+---
+
+# Best pun of 6 Rin3 sessions
+
+<img src='images/best-pun.jpg'/>
+
+???
+
+This was in the Spring 2023 intake.
 
 ---
 
