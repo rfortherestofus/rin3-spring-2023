@@ -31,6 +31,10 @@ library(janitor)
 
 --
 
+1. Review of functions you learned this week
+
+--
+
 1. Tips from feedback
 
 --
@@ -47,10 +51,6 @@ library(janitor)
 
 --
 
-- Office hours recap
-
---
-
 - Questions on project assignments?
 
 --
@@ -59,11 +59,78 @@ library(janitor)
 
 --
 
-- Git + GitHub course
-
---
-
 - Catch-up weeks
+
+---
+
+class: inverse, center, middle
+
+# Review of Data Wrangling and Analysis Functions
+
+
+
+---
+
+class: center, middle
+
+# The Pipe
+
+![](images/pipe.png)
+
+???
+
+Discuss native pipe
+
+
+---
+
+class: center, middle
+
+# `select()`
+
+![](images/select.png)
+
+
+---
+
+class: center, middle
+
+# `mutate()`
+
+![](images/mutate.png)
+
+---
+
+class: center, middle
+
+# `filter()`
+
+![](images/filter.png)
+
+---
+
+class: center, middle
+
+# `summarize()`
+
+![](images/summarize.png)
+
+---
+
+class: center, middle
+
+# `group_by()`
+
+![](images/group-by.png)
+
+
+---
+
+class: center, middle
+
+# `arrange()`
+
+![](images/arrange.png)
 
 
 ---
@@ -98,6 +165,10 @@ class: inverse, center, middle
 - It's smarter! It will more often detect complex data types
 
 - It's **much** faster.
+
+--
+
+[There's a lesson that Charlie made on this topic](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/read_csv-vs-read-csv/)
 
 
 ---

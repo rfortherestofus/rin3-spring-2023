@@ -31,9 +31,7 @@ penguins %>%
   filter(year == 2009) %>% 
   group_by(island) %>% 
   summarize(avg_bill_length = mean(bill_length_mm,
-                                   na.rm = TRUE)) %>% 
-  set_names("Island", "Average Bill Length") %>% 
-  gt()
+                                   na.rm = TRUE))
 ```
 # Average Body Mass in Pounds by Species Among Female Penguins
 
