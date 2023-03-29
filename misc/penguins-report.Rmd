@@ -33,6 +33,7 @@ penguins %>%
   summarize(avg_bill_length = mean(bill_length_mm,
                                    na.rm = TRUE))
 ```
+
 # Average Body Mass in Pounds by Species Among Female Penguins
 
 ```{r}
