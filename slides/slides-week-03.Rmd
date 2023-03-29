@@ -39,7 +39,7 @@ library(janitor)
 
 --
 
-1. Group Work
+1. Data wrangling exercise
 
 --
 
@@ -60,6 +60,10 @@ library(janitor)
 --
 
 - Catch-up weeks
+
+??
+
+Submit assignments whenever
 
 ---
 
@@ -364,7 +368,7 @@ get_acs(year = 2019,
 
 ---
 
-# Group Work
+# Data Wrangling Exercise
 
 
 Create a new RStudio project
