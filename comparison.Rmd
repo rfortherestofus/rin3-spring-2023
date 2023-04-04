@@ -1,0 +1,33 @@
+---
+title: "read_csv() vs read.csv()"
+output: xaringan::moon_reader
+date: "2023-03-24"
+---
+
+# read_csv() is our preferred solution
+
+- It understands empty cells as NA automatically
+
+- It's smarter! It will more often detect complex data types
+
+- It's **much** faster.
+
+---
+
+# Why do others prefer read.csv()
+
+For some (good) reasons some R users prefer to use as few packages as possible.
+
+--
+
+What are those reasons? It reduced dependencies.
+
+- This is important if IT makes installing packages difficult
+
+--
+
+- In 10 years time will that package still work?
+
+  - We are very confident the tidyverse will still exist in 10 years time
+  
+  - Even if it doesn't there is excellent tooling for reproducibly using old packages with {renv}
