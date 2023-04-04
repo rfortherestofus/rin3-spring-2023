@@ -1,0 +1,39 @@
+---
+title: "Week 2 Email"
+format: html
+---
+
+## Hello folks,
+
+It was nice to see everyone this morning. It sounds like people are excited about RMarkdown, which is great to hear. To me, it's really the best thing about R.
+
+**Live Session Recap**
+
+We talked today about some common issues people encounter with RMarkdown. If you weren't able to attend today, [please watch the recording](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/r-in-3-months-spring-2023-week-2-live-session/).
+
+We also talked about a few additional things, including:
+
+-   The importance of always using RStudio projects. [I've added a video that Charlie previously made on this topic as a new lesson](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/rstudio-projects/).
+
+-   The best way to structure your projects. [Here is a blog post I wrote about my approach](https://rfortherestofus.com/2021/08/rstudio-project-structure/).
+
+-   Using the [cheatsheets that Posit makes](https://posit.co/resources/cheatsheets/). They can be overwhelming, but also very handy to remember things as you get started with R.
+
+-   The next-generation RMarkdown-like tool called [Quarto](https://quarto.org/). If you want to learn more about it, [Tom Mock did a great workshop on it last year](https://www.youtube.com/watch?v=yvi5uXQMvu4). Again, as we discussed in our session, you don't need to use Quarto. And, if you learn RMarkdown, switching to Quarto is straightforward. I personally haven't switched over to Quarto yet, but plan to later this year.
+
+**Next Week\
+**
+
+Next week you'll be learning about the fundamentals of data wrangling and analysis using the [dplyr package](https://dplyr.tidyverse.org/). There are six main functions you'll learn and they will set you up for success in all data work from here on out. 
+
+Your project assignment is to do some type of simple analysis on your own data. The details, complete with video walkthrough, are laid out in the [week 3 project assignment lesson](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/r-in-3-months-spring-2023-week-3-project-assignment/).
+
+This is the first week that you do need to have some data to work with. If you have any questions about what data to use, please let us know. 
+
+For next week, you will need to have your data in CSV format in order to submit it alongside your gist (the video walkthrough demonstrates how to do this). If you need any help getting your data into CSV format, please let us know. If you have SPSS, SAS, or data in some other external format, we can help you get it into CSV. 
+
+I think that's it for now. If you have any questions, please don't hesitate to reach out.
+
+Cheers,\
+\
+David

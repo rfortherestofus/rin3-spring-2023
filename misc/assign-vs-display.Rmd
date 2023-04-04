@@ -1,0 +1,46 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-03-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(gt)
+```
+
+```{r}
+penguins_raw <- read_csv("../data/penguins.csv")
+
+penguins_clean <- penguins_raw %>% 
+  mutate(bill_length_depth = bill_length_mm + bill_depth_mm, .before = island) 
+```
+
+```{r}
+penguins <- read_csv("../data/penguins.csv")
+
+penguins <- penguins %>% 
+  mutate(bill_length_depth = bill_length_mm + bill_depth_mm, .before = island) 
+```
+
+
+```{r}
+penguins %>% 
+  gt()
+```
+
+```{r}
+penguins_clean %>% 
+  select(species, bill_length_depth) %>% 
+  gt()
+```
+
+
+
