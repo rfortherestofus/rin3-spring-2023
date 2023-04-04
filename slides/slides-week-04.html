@@ -3,7 +3,7 @@
   <head>
     <title>R in 3 Months: Week 4 (Data Viz)</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.20/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -47,7 +47,15 @@ class: center, middle, inverse, title-slide
 
 --
 
-- Next week we won't have a live session, but you can book a one-to-one with Charlie - [rfor.us/charliechat](https://rfor.us/charliechat)
+- Next week we won't have a live session, but there will be office hours
+
+--
+
+- Submit assignments whenever you have them ready
+
+--
+
+- You will have access to R in 3 Months materials FOREVER!
 
 ---
 
@@ -89,34 +97,7 @@ However, it's advised that **one code chunk displays one thing in the output doc
 
 ---
 
-# Limit code chunks to one output
-
-When we start naming code chunks it makes sense to restrict code chunks to one output
-
-
-
-```r
-msleep %&gt;% 
-  count(vore)
-  gt()
-```
-
-
-
-
-```r
-msleep %&gt;% 
-  group_by(vore) %&gt;% 
-  summarise(mean_sleep = mean(sleep_total, na.rm = TRUE))
-  gt()
-```
-
-
-This also helps us if we choose to use internal cross-referencing in more complex reports.
-
----
-
-## Updating columns
+# Updating columns
 
 There's a base R way of doing things
 
@@ -135,7 +116,7 @@ your_data &lt;- your_data %&gt;%
 
 ---
 
-## Making nice % columns
+# Making nice % columns
 
 The `tabyl()` and `adorn_*()` functions from `{janitor}` are useful for quick summaries.
 
@@ -171,7 +152,7 @@ percent(1)
 
 ---
 
-## Making nice % columns
+# Making nice % columns
 
 
 
@@ -198,7 +179,7 @@ dollar(2000000)
 
 ---
 
-## Save Source, not Workspace
+# Save Source, not Workspace
 
 Why do we not want to reload our data when we start RStudio? 
 
@@ -217,13 +198,7 @@ Source: [rstats.wtf](https://rstats.wtf/save-source.html)
 
 class: inverse, center, middle
 
-# Data Viz Examples
-
----
-
-## Charlie Data Viz Example
-
-![](images/week-4_charlie-data-viz.png)
+# Data Viz Example
   
 ---
 
@@ -260,11 +235,6 @@ What questions do you still have?
 --
 
 1. Office hours **will** happen
-
---
-
-1. Book a one-to-one session with Charlie: [rfor.us/charliechat](https://rfor.us/charliechat)
-
 
 
     </textarea>

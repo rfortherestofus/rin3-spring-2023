@@ -8,7 +8,8 @@ tfff_dark_green <- "#265142"
 race_ethnicity <- read_csv("data/race-ethnicity.csv") %>%
   filter(geography == "Multnomah",
          year == 2020) %>%
-  select(population, value)
+  select(population, value) %>% 
+  mutate(value_formatted = percent(value, accuracy = 0.1))
 
 race_ethnicity %>% 
   mutate(population = fct_rev(population)) %>% 

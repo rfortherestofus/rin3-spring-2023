@@ -52,7 +52,15 @@ library(gt)
 
 --
 
-- Next week we won't have a live session, but you can book a one-to-one with Charlie - [rfor.us/charliechat](https://rfor.us/charliechat)
+- Next week we won't have a live session, but there will be office hours
+
+--
+
+- Submit assignments whenever you have them ready
+
+--
+
+- You will have access to R in 3 Months materials FOREVER!
 
 ---
 
@@ -93,32 +101,7 @@ However, it's advised that **one code chunk displays one thing in the output doc
 
 ---
 
-# Limit code chunks to one output
-
-When we start naming code chunks it makes sense to restrict code chunks to one output
-
-
-```{r, table-count-diet, eval = FALSE}
-msleep %>% 
-  count(vore)
-  gt()
-```
-
-
-
-```{r, table-diet-mean-sleep, eval = FALSE}
-msleep %>% 
-  group_by(vore) %>% 
-  summarise(mean_sleep = mean(sleep_total, na.rm = TRUE))
-  gt()
-```
-
-
-This also helps us if we choose to use internal cross-referencing in more complex reports.
-
----
-
-## Updating columns
+# Updating columns
 
 There's a base R way of doing things
 
@@ -135,7 +118,7 @@ your_data <- your_data %>%
 
 ---
 
-## Making nice % columns
+# Making nice % columns
 
 The `tabyl()` and `adorn_*()` functions from `{janitor}` are useful for quick summaries.
 
@@ -160,7 +143,7 @@ percent(1)
 
 ---
 
-## Making nice % columns
+# Making nice % columns
 
 
 ```{r}
@@ -177,7 +160,7 @@ dollar(2000000)
 
 ---
 
-## Save Source, not Workspace
+# Save Source, not Workspace
 
 Why do we not want to reload our data when we start RStudio? 
 
@@ -196,13 +179,7 @@ Source: [rstats.wtf](https://rstats.wtf/save-source.html)
 
 class: inverse, center, middle
 
-# Data Viz Examples
-
----
-
-## Charlie Data Viz Example
-
-![](images/week-4_charlie-data-viz.png)
+# Data Viz Example
   
 ---
 
@@ -239,10 +216,5 @@ What questions do you still have?
 --
 
 1. Office hours **will** happen
-
---
-
-1. Book a one-to-one session with Charlie: [rfor.us/charliechat](https://rfor.us/charliechat)
-
 
 
