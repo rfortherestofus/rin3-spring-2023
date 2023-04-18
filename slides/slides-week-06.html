@@ -3,7 +3,7 @@
   <head>
     <title>Rin3 Months: Week 6 (Git + GitHub)</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.21/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -20,16 +20,6 @@ class: center, middle, inverse, title-slide
 ---
 
 
-
-
-
-&lt;!---- PLAN
-
-THESE SLIDES USE sli.do FOR POLLS!
-
-USE THIS LINK: https://app.sli.do/event/ndcJPnZgvf18CgCbCp93hn/live/polls
-
----&gt;
 
 
 
@@ -61,6 +51,24 @@ USE THIS LINK: https://app.sli.do/event/ndcJPnZgvf18CgCbCp93hn/live/polls
 
 --
 
+- One more catch-up week later on
+
+--
+
+- Last office hours next week
+
+--
+
+- [You can schedule a 30-minute 1-on-1 with Charlie any time between now and the end of June](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat)
+
+--
+
+- You can submit any assignments for feedback before end of June
+
+--
+
+- You'll have access to materials forever
+
 ---
 
 class: inverse, center, middle
@@ -73,7 +81,7 @@ class: inverse, center, middle
 
 While there's one package we recommend for charts (`ggplot2`)... the package landscape is more complicated for tables.
 
-David has written a [great blogpost comparing the most widely used packages](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/).
+David has written a [great blogpost comparing the most widely used packages](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/) and a [chapter in R Without Statistics about tables](https://book.rwithoutstatistics.com/tables-chapter.html).
 
 --
 
@@ -98,60 +106,6 @@ David has written a [great blogpost comparing the most widely used packages](htt
 - [{gt}](https://gt.rstudio.com/) is the most general purpose and flexible solution for making charts. It relies on HTML and CSS.
 
 - [{flextable}](https://davidgohel.github.io/flextable/index.html) is the solution if you need to output to Word documents. We've also found it useful for tables that need to span multiple pages.
-
-]
-
----
-
-## Why are my columns too big?
-
-Some folks have asked why their bar charts are too large.
-
-
-
-.pull-left[
-
-```r
-bmi_data %&gt;% 
-  ggplot(aes(x = heart_disease,
-             y = avg_bmi)) +
-  geom_col() +
-  facet_wrap(~ sex)
-```
-]
-
-.pull-right[
-&lt;img src="slides-week-06_files/figure-html/unnamed-chunk-4-1.png" height="450px" /&gt;
-]
-
----
-
-
-The `geom_bar()` geom does counting for us - bars length are calculated from counting how many observations there are:
-
-.pull-left[
-
-```r
-msleep %&gt;% 
-  ggplot(aes(x = vore)) +
-  geom_bar()
-```
-
-&lt;img src="slides-week-06_files/figure-html/unnamed-chunk-5-1.png" height="300px" /&gt;
-]
-
-.pull-right[
-
-
-```r
-msleep %&gt;% 
-  count(vore) %&gt;% 
-  ggplot(aes(x = vore,
-             y = n)) +
-  geom_col()
-```
-
-&lt;img src="slides-week-06_files/figure-html/unnamed-chunk-6-1.png" height="300px" /&gt;
 
 ]
 
@@ -198,6 +152,28 @@ iris %&gt;%
 
 ---
 
+## Why are my bars so long?
+
+.pull-left[
+
+
+```r
+msleep %&gt;%
+  ggplot(aes(x = vore,
+             y = sleep_total)) +
+  geom_col()
+```
+
+]
+
+.pull-right[
+
+![](slides-week-06_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
 ## Formatted text in charts
 
 Later in the course we'll introduce the `ggtext` package that will allow us to use HTML in {ggplot2} chart elements.
@@ -211,12 +187,7 @@ ggplot(data = penguins,
   labs(title = "Penguins are *really cool*")
 ```
 
-&lt;img src="slides-week-06_files/figure-html/unnamed-chunk-10-1.png" width="300px" /&gt;
-
-???
-
-I think it’s worth telling the students to abandon any stackoverflow question that mentions using expression() for formatting text
-
+&lt;img src="slides-week-06_files/figure-html/unnamed-chunk-6-1.png" width="300px" /&gt;
 
 ---
 
@@ -228,15 +199,55 @@ class: inverse, center, middle
 
 ---
 
-## Save files first
+## A Few Tips for Working with Git and GitHub
 
-If you don't save your files first, you can't commit them
+--
+
+1. Make sure you're working in a project
+
+--
+
+1. Save files before you commit
+
+--
+
+1. Make sure to select all files you want to commit
+
+---
+
+## Editing files in the browser on GitHub
+
+--
+
+The GitHub website gives you the ability to edit files directly.
+
+--
+
+Technically, this is exactly the same as making a commit.
+
+--
+
+Remember you will need to **pull** the changes onto your local machine.
+
+---
+
+## README
+
+When you push a project to GitHub, it will ask if you want to create a README file.
+
+--
+
+The README is a good place to write out instructions for future users (including yourself).
 
 ---
 
 ## GitHub Desktop
 
+--
+
 The git tab in RStudio is great, it will suit most of your needs.
+
+--
 
 GitHub Desktop provides some additional tools and capabilities that might be useful for more advanced users.
 
@@ -244,15 +255,7 @@ GitHub Desktop provides some additional tools and capabilities that might be use
 
 If you can't get RStudio and git to work together then consider trying GitHub Desktop instead.
 
----
 
-## Editing files in the browser on GitHub
-
-The GitHub website gives you the ability to edit files directly.
-
-Technically, this is exactly the same as making a commit.
-
-Remember you will need to **pull** the changes onto your local machine.
 
 ---
 
@@ -260,11 +263,15 @@ Remember you will need to **pull** the changes onto your local machine.
 
 --
 
+How we use issues
+
+--
+
 How we publish slides every week
 
 --
 
-How we use issues
+Branches
 
 ---
 
@@ -289,11 +296,7 @@ class: inverse, center, middle
 
 --
 
-1. No project assignment next week
-
---
-
-1. Time change
+1. No project assignment next week (but think about how your data is/is not tidy)
 
 
 
