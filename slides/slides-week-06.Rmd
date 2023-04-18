@@ -112,27 +112,25 @@ David has written a [great blogpost comparing the most widely used packages](htt
 
 Some folks have asked why their bar charts are too large.
 
-```{r, include=FALSE}
-bmi_data <- read_csv(here::here("data", "bars-too-long.csv"))
-```
 
 .pull-left[
 ```{r, eval=FALSE}
-bmi_data %>% 
-  ggplot(aes(x = heart_disease,
-             y = avg_bmi)) +
-  geom_col() +
-  facet_wrap(~ sex)
+msleep %>% 
+  ggplot() +
+  aes(x = vore,
+      y = sleep_total) +
+  geom_col()
+
 ```
 ]
 
 .pull-right[
 ```{r, eval=TRUE, echo=FALSE, out.height='450px'}
-bmi_data %>% 
-  ggplot(aes(x = heart_disease,
-             y = avg_bmi)) +
-  geom_col() +
-  facet_wrap(~ sex)
+msleep %>% 
+  ggplot() +
+  aes(x = vore,
+      y = sleep_total) +
+  geom_col()
 ```
 ]
 
