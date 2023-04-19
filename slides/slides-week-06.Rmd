@@ -80,6 +80,11 @@ class: inverse, center, middle
 
 ---
 
+## When to put code in the console
+
+---
+
+
 ## Making beautiful tables in Rmd
 
 While there's one package we recommend for charts (`ggplot2`)... the package landscape is more complicated for tables.
@@ -167,6 +172,14 @@ msleep %>%
 
 ---
 
+## `theme_ipsum()` issues
+
+Fonts are complicated in R, but have become easier
+
+[New lesson to help you](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/customize-your-fonts/)
+
+---
+
 ## Formatted text in charts
 
 Later in the course we'll introduce the `ggtext` package that will allow us to use HTML in {ggplot2} chart elements.
@@ -214,6 +227,12 @@ class: inverse, center, middle
 
 ---
 
+## Looking at GitHub Repos
+
+[Let's look at the course repo](https://github.com/rfortherestofus/rin3-spring-2023)
+
+---
+
 ## Editing files in the browser on GitHub
 
 --
@@ -231,6 +250,8 @@ Remember you will need to **pull** the changes onto your local machine.
 ---
 
 ## README
+
+--
 
 When you push a project to GitHub, it will ask if you want to create a README file.
 
