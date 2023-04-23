@@ -132,19 +132,18 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 10 × 16
-##    Location   Sector  Year Jan   Feb   Mar   Apr   May   Jun   Jul   Aug   Sept 
-##    &lt;chr&gt;      &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-##  1 Chelsea    Comme…  2017 1,00… 895,… 1,03… 655,… 504,… 379,… 320,… 348,… 342,…
-##  2 West Spri… Resid…  2016 1,00… 922,… 680,… 481,… 242,… 137,… 120,… 115,… 142,…
-##  3 Harwich    Total   2013 1,00… 946,… 780,… 501,… 311,… 220,… 199,… 196,… 197,…
-##  4 Weston     Resid…  2017 1,00… 835,… 840,… 508,… 294,… 183,… 136,… 147,… 154,…
-##  5 Shrewsbury Comme…  2019 1,00… 867,… 798,… 519,… 339,… 225,… 203,… 240,… 260,…
-##  6 Dartmouth  Resid…  2019 1,00… 782,… 723,… 382,… 253,… 129,… 103,… 100,… 119,…
-##  7 Sharon     Resid…  2014 1,00… 936,… 835,… 427,… 207,… 120,… 99,2… 99,9… 125,…
-##  8 Ludlow     Total   2015 1,00… 940,… 669,… 138,… 159,… 104,… 98,0… 97,7… 110,…
-##  9 Swansea    Total   2018 1,00… 732,… 813,… 593,… 255,… 137,… 103,… 101,… 104,…
-## 10 Braintree  Resid…  2017 1,00… 885,… 814,… 518,… 265,… 157,… 117,… 117,… 130,…
-## # … with 4 more variables: Oct &lt;chr&gt;, Nov &lt;chr&gt;, Dec &lt;chr&gt;, Annual &lt;chr&gt;
+##    Location  Sector  Year Jan   Feb   Mar   Apr   May   Jun   Jul   Aug   Sept  Oct   Nov   Dec   Annual
+##    &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
+##  1 Chelsea   Comme…  2017 1,00… 895,… 1,03… 655,… 504,… 379,… 320,… 348,… 342,… 450,… 732,… 1,04… 7,710…
+##  2 West Spr… Resid…  2016 1,00… 922,… 680,… 481,… 242,… 137,… 120,… 115,… 142,… 528,… 1,27… 1,96… 7,614…
+##  3 Harwich   Total   2013 1,00… 946,… 780,… 501,… 311,… 220,… 199,… 196,… 197,… 330,… 667,… 997,… 6,351…
+##  4 Weston    Resid…  2017 1,00… 835,… 840,… 508,… 294,… 183,… 136,… 147,… 154,… 305,… 591,… 1,12… 6,130…
+##  5 Shrewsbu… Comme…  2019 1,00… 867,… 798,… 519,… 339,… 225,… 203,… 240,… 260,… 376,… 726,… 882,… 6,443…
+##  6 Dartmouth Resid…  2019 1,00… 782,… 723,… 382,… 253,… 129,… 103,… 100,… 119,… 247,… 510,… 749,… 5,106…
+##  7 Sharon    Resid…  2014 1,00… 936,… 835,… 427,… 207,… 120,… 99,2… 99,9… 125,… 276,… 554,… 807,… 5,496…
+##  8 Ludlow    Total   2015 1,00… 940,… 669,… 138,… 159,… 104,… 98,0… 97,7… 110,… 211,… 344,… 627,… 4,508…
+##  9 Swansea   Total   2018 1,00… 732,… 813,… 593,… 255,… 137,… 103,… 101,… 104,… 279,… 562,… 802,… 5,493…
+## 10 Braintree Resid…  2017 1,00… 885,… 814,… 518,… 265,… 157,… 117,… 117,… 130,… 269,… 606,… 1,10… 5,994…
 ```
 
 ---
@@ -156,18 +155,18 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 100 × 4
-##    name         age gender religion 
-##    &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
-##  1 Chanel        66 Male   Buddhist 
-##  2 Marillyn      68 Male   Christian
-##  3 Brentleigh    65 Male   None     
-##  4 Nagisa        71 Female Buddhist 
-##  5 Suave         86 Male   None     
-##  6 Ariss         80 Female Muslim   
-##  7 Walt          64 Female Hindu    
-##  8 Hafiz         46 Male   Folk     
-##  9 Marsden       79 Female Folk     
-## 10 Javale        29 Female Muslim   
+##    name       age gender religion 
+##    &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
+##  1 Neomi       50 Male   Muslim   
+##  2 Math        62 Male   None     
+##  3 Rupa        76 Female None     
+##  4 Kaen        72 Female Buddhist 
+##  5 Amour       81 Male   Christian
+##  6 Toshika     34 Male   Muslim   
+##  7 Brooklee    23 Male   Christian
+##  8 Diadra      72 Male   Buddhist 
+##  9 Sharmar     32 Male   Christian
+## 10 Justhin     73 Female Christian
 ## # … with 90 more rows
 ```
 
@@ -205,21 +204,20 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 36 × 8
-##    GEOID NAME                    n_in_…¹ n_in_…² n_in_…³ n_in_…⁴ n_in_…⁵ n_in_…⁶
-##    &lt;chr&gt; &lt;chr&gt;                     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 41039 Lane County, Oregon       29634    1657   34823    1495   13381    1111
-##  2 41067 Washington County, Ore…   23520    1382   28586    1498   15621    1342
-##  3 41007 Clatsop County, Oregon     1818     337    2046     348     573     206
-##  4 41029 Jackson County, Oregon    14802    1097   18432    1335    9317    1040
-##  5 41023 Grant County, Oregon        558     139     725     181     307     109
-##  6 41005 Clackamas County, Oreg…   14369    1199   18234    1139    8002     982
-##  7 41057 Tillamook County, Oreg…    1614     298    1751     307     957     297
-##  8 41033 Josephine County, Oreg…    7488     797    7896     796    4102     644
-##  9 41059 Umatilla County, Oregon    5296     700    7630     917    4991     841
-## 10 41009 Columbia County, Oregon    2497     404    3431     473    1478     440
-## # … with 26 more rows, and abbreviated variable names ¹​n_in_poverty_maleE,
-## #   ²​n_in_poverty_maleM, ³​n_in_poverty_femaleE, ⁴​n_in_poverty_femaleM,
-## #   ⁵​n_in_poverty_under_18E, ⁶​n_in_poverty_under_18M
+##    GEOID NAME                      n_in_poverty_maleE n_in_poverty_maleM n_in_…¹ n_in_…² n_in_…³ n_in_…⁴
+##    &lt;chr&gt; &lt;chr&gt;                                  &lt;dbl&gt;              &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 41039 Lane County, Oregon                    29634               1657   34823    1495   13381    1111
+##  2 41067 Washington County, Oregon              23520               1382   28586    1498   15621    1342
+##  3 41007 Clatsop County, Oregon                  1818                337    2046     348     573     206
+##  4 41029 Jackson County, Oregon                 14802               1097   18432    1335    9317    1040
+##  5 41023 Grant County, Oregon                     558                139     725     181     307     109
+##  6 41005 Clackamas County, Oregon               14369               1199   18234    1139    8002     982
+##  7 41057 Tillamook County, Oregon                1614                298    1751     307     957     297
+##  8 41033 Josephine County, Oregon                7488                797    7896     796    4102     644
+##  9 41059 Umatilla County, Oregon                 5296                700    7630     917    4991     841
+## 10 41009 Columbia County, Oregon                 2497                404    3431     473    1478     440
+## # … with 26 more rows, and abbreviated variable names ¹​n_in_poverty_femaleE, ²​n_in_poverty_femaleM,
+## #   ³​n_in_poverty_under_18E, ⁴​n_in_poverty_under_18M
 ```
 
 ---
@@ -231,15 +229,24 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 5 × 6
-##   Name                         Type             Group      Intro…¹ Usage Comme…²
-##   &lt;chr&gt;                        &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;  
-## 1 Vikram samwat                Lunisolar        Indian     Ancien… Indi… The Vi…
-## 2 Egyptian calendar            fixed (365 days) Egyptian   Bronze… Midd… The ye…
-## 3 Umma calendar                lunisolar        Mesopotam… Bronze… Sume… Record…
-## 4 Pentecontad calendar         solar            Mesopotam… Bronze… Amor… A Bron…
-## 5 Four Seasons and Eight Nodes solar            Chinese    Bronze… China The ye…
-## # … with abbreviated variable names ¹​Introduction, ²​Comments
+##   Name                         Type             Group        Introduction  Usage             Comments   
+##   &lt;chr&gt;                        &lt;chr&gt;            &lt;chr&gt;        &lt;chr&gt;         &lt;chr&gt;             &lt;chr&gt;      
+## 1 Vikram samwat                Lunisolar        Indian       Ancient India India/Nepal       The Vira N…
+## 2 Egyptian calendar            fixed (365 days) Egyptian     Bronze Age    Middle Kingdom    The year i…
+## 3 Umma calendar                lunisolar        Mesopotamian Bronze Age    Sumer/Mesopotamia Recorded i…
+## 4 Pentecontad calendar         solar            Mesopotamian Bronze Age    Amorites          A Bronze A…
+## 5 Four Seasons and Eight Nodes solar            Chinese      Bronze Age(?) China             The years …
 ```
+
+---
+
+## Is this dataset wide or long?
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["patient_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["donor_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["donor_2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["donor_3"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"C","3":"576","4":"329","5":"979"},{"1":"2","2":"A","3":"518","4":"309","5":"936"},{"1":"3","2":"C","3":"505","4":"317","5":"906"},{"1":"4","2":"A","3":"520","4":"282","5":"924"},{"1":"5","2":"A","3":"552","4":"301","5":"985"},{"1":"6","2":"A","3":"507","4":"333","5":"968"},{"1":"7","2":"A","3":"576","4":"310","5":"973"},{"1":"8","2":"A","3":"531","4":"241","5":"915"},{"1":"9","2":"B","3":"504","4":"306","5":"956"},{"1":"10","2":"A","3":"511","4":"341","5":"915"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
 
 ---
 
