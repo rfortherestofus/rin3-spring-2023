@@ -3,7 +3,7 @@
   <head>
     <title>R in 3 Months: Week 7 (Tidy Data)</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.21/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
     <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -144,7 +144,7 @@ The previous dataset is wide. What `ggplot2` needs is long.
 ##  8 Ludlow     Total   2015 1,00… 940,… 669,… 138,… 159,… 104,… 98,0… 97,7… 110,…
 ##  9 Swansea    Total   2018 1,00… 732,… 813,… 593,… 255,… 137,… 103,… 101,… 104,…
 ## 10 Braintree  Resid…  2017 1,00… 885,… 814,… 518,… 265,… 157,… 117,… 117,… 130,…
-## # … with 4 more variables: Oct &lt;chr&gt;, Nov &lt;chr&gt;, Dec &lt;chr&gt;, Annual &lt;chr&gt;
+## # ℹ 4 more variables: Oct &lt;chr&gt;, Nov &lt;chr&gt;, Dec &lt;chr&gt;, Annual &lt;chr&gt;
 ```
 
 ---
@@ -156,19 +156,19 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 100 × 4
-##    name         age gender religion 
-##    &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
-##  1 Chanel        66 Male   Buddhist 
-##  2 Marillyn      68 Male   Christian
-##  3 Brentleigh    65 Male   None     
-##  4 Nagisa        71 Female Buddhist 
-##  5 Suave         86 Male   None     
-##  6 Ariss         80 Female Muslim   
-##  7 Walt          64 Female Hindu    
-##  8 Hafiz         46 Male   Folk     
-##  9 Marsden       79 Female Folk     
-## 10 Javale        29 Female Muslim   
-## # … with 90 more rows
+##    name       age gender religion 
+##    &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
+##  1 Starlisa    54 Male   Christian
+##  2 Dolores     31 Female Muslim   
+##  3 Alonza      56 Male   None     
+##  4 Drue        29 Male   Hindu    
+##  5 Tavania     56 Female Muslim   
+##  6 Patches     65 Male   None     
+##  7 Fracine     47 Male   Muslim   
+##  8 Keirah      78 Female Folk     
+##  9 Omarion     26 Female Christian
+## 10 Momoyo      86 Female None     
+## # ℹ 90 more rows
 ```
 
 ---
@@ -192,7 +192,7 @@ The previous dataset is wide. What `ggplot2` needs is long.
 ##  8 41005 Clackamas County, Oregon n_in_poverty_male        14369  1199
 ##  9 41005 Clackamas County, Oregon n_in_poverty_female      18234  1139
 ## 10 41007 Clatsop County, Oregon   n_in_poverty_under_18      573   206
-## # … with 98 more rows
+## # ℹ 98 more rows
 ```
 
 ---
@@ -205,21 +205,21 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 36 × 8
-##    GEOID NAME                    n_in_…¹ n_in_…² n_in_…³ n_in_…⁴ n_in_…⁵ n_in_…⁶
-##    &lt;chr&gt; &lt;chr&gt;                     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-##  1 41039 Lane County, Oregon       29634    1657   34823    1495   13381    1111
-##  2 41067 Washington County, Ore…   23520    1382   28586    1498   15621    1342
-##  3 41007 Clatsop County, Oregon     1818     337    2046     348     573     206
-##  4 41029 Jackson County, Oregon    14802    1097   18432    1335    9317    1040
-##  5 41023 Grant County, Oregon        558     139     725     181     307     109
-##  6 41005 Clackamas County, Oreg…   14369    1199   18234    1139    8002     982
-##  7 41057 Tillamook County, Oreg…    1614     298    1751     307     957     297
-##  8 41033 Josephine County, Oreg…    7488     797    7896     796    4102     644
-##  9 41059 Umatilla County, Oregon    5296     700    7630     917    4991     841
-## 10 41009 Columbia County, Oregon    2497     404    3431     473    1478     440
-## # … with 26 more rows, and abbreviated variable names ¹​n_in_poverty_maleE,
-## #   ²​n_in_poverty_maleM, ³​n_in_poverty_femaleE, ⁴​n_in_poverty_femaleM,
-## #   ⁵​n_in_poverty_under_18E, ⁶​n_in_poverty_under_18M
+##    GEOID NAME         n_in_poverty_maleE n_in_poverty_maleM n_in_poverty_femaleE
+##    &lt;chr&gt; &lt;chr&gt;                     &lt;dbl&gt;              &lt;dbl&gt;                &lt;dbl&gt;
+##  1 41039 Lane County…              29634               1657                34823
+##  2 41067 Washington …              23520               1382                28586
+##  3 41007 Clatsop Cou…               1818                337                 2046
+##  4 41029 Jackson Cou…              14802               1097                18432
+##  5 41023 Grant Count…                558                139                  725
+##  6 41005 Clackamas C…              14369               1199                18234
+##  7 41057 Tillamook C…               1614                298                 1751
+##  8 41033 Josephine C…               7488                797                 7896
+##  9 41059 Umatilla Co…               5296                700                 7630
+## 10 41009 Columbia Co…               2497                404                 3431
+## # ℹ 26 more rows
+## # ℹ 3 more variables: n_in_poverty_femaleM &lt;dbl&gt;, n_in_poverty_under_18E &lt;dbl&gt;,
+## #   n_in_poverty_under_18M &lt;dbl&gt;
 ```
 
 ---
@@ -231,14 +231,13 @@ The previous dataset is wide. What `ggplot2` needs is long.
 
 ```
 ## # A tibble: 5 × 6
-##   Name                         Type             Group      Intro…¹ Usage Comme…²
-##   &lt;chr&gt;                        &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;  
-## 1 Vikram samwat                Lunisolar        Indian     Ancien… Indi… The Vi…
-## 2 Egyptian calendar            fixed (365 days) Egyptian   Bronze… Midd… The ye…
-## 3 Umma calendar                lunisolar        Mesopotam… Bronze… Sume… Record…
-## 4 Pentecontad calendar         solar            Mesopotam… Bronze… Amor… A Bron…
-## 5 Four Seasons and Eight Nodes solar            Chinese    Bronze… China The ye…
-## # … with abbreviated variable names ¹​Introduction, ²​Comments
+##   Name                         Type            Group Introduction Usage Comments
+##   &lt;chr&gt;                        &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;   
+## 1 Vikram samwat                Lunisolar       Indi… Ancient Ind… Indi… The Vir…
+## 2 Egyptian calendar            fixed (365 day… Egyp… Bronze Age   Midd… The yea…
+## 3 Umma calendar                lunisolar       Meso… Bronze Age   Sume… Recorde…
+## 4 Pentecontad calendar         solar           Meso… Bronze Age   Amor… A Bronz…
+## 5 Four Seasons and Eight Nodes solar           Chin… Bronze Age(… China The yea…
 ```
 
 ---
