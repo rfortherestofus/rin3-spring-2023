@@ -40,20 +40,25 @@ library(janitor)
 
 --
 
-1. More Complicated Tidying Examples
-
---
-
 1. Next Week
 
 ---
-class: inverse, center, middle
 
 # Housekeeping
+
+--
+
+If anyone is stuck on getting Git/GitHub set up, please let us know. We will help you!
+
+--
+
+`na_if()` example
 
 ???
 
 Discuss week
+
+
 
 ---
 
@@ -106,11 +111,15 @@ From the [tidy data vignette](https://tidyr.tidyverse.org/articles/tidy-data.htm
 `ggplot` needs data in a tidy format. This dataset is the exact opposite of what {ggplot2} needs for a bar chart.
 
 ```{r, echo=FALSE}
-msleep %>% 
-  drop_na(vore) %>% 
-  count(vore) %>% 
-  pivot_wider(names_from = vore,
-              values_from = n)
+set.seed(187)
+donor_data <- tibble(
+  patient_id = 1:10,
+  type = c(sample(c("A", "B", "C"), 10, replace = TRUE)),
+  donor_1 = round(runif(10, 500, 600)),
+  donor_2 = round(rnorm(10, 300, 50)),
+  donor_3 = round(runif(10, 900, 1000))
+)
+donor_data
 ```
 
 ---
@@ -120,9 +129,8 @@ msleep %>%
 The previous dataset is wide. What `ggplot2` needs is long.
 
 ```{r, echo=FALSE}
-msleep %>% 
-  drop_na(vore) %>% 
-  count(vore)
+donor_data %>% 
+  pivot_longer(cols = -c(patient_id, type))
 ```
 
 ---
@@ -197,32 +205,6 @@ acs_poverty_wide
 
 ---
 
-## Is this dataset wide or long?
-
-`wikipedia_calendars`
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-read_csv(here::here("data", "wikipedia-tables.csv"))
-```
-
----
-
-## Is this dataset wide or long?
-
-```{r, echo=FALSE}
-set.seed(187)
-donor_data <- tibble(
-  patient_id = 1:10,
-  type = c(sample(c("A", "B", "C"), 10, replace = TRUE)),
-  donor_1 = round(runif(10, 500, 600)),
-  donor_2 = round(rnorm(10, 300, 50)),
-  donor_3 = round(runif(10, 900, 1000))
-)
-donor_data
-```
-
----
-
 # `pivot_longer()`
 
 ```{r eval = FALSE}
@@ -270,26 +252,7 @@ Copy the code from [this gist](https://gist.githubusercontent.com/dgkeyes/1d5ceb
 
 ---
 
-class: inverse, center, middle
-
-# More complicated tidying
-
----
-
-### pivot_longer(names_sep)
-
-It's possible to tell `pivot_longer()` to split column names into two "name" columns.
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-gapminder_wide <- read_csv("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv")
-
-gapminder_wide
-```
-
-
----
-
-## Why is wide data sometimes desirable?
+# Why is wide data sometimes desirable?
 
 Do you have any ideas?
 
@@ -336,6 +299,6 @@ These skills will equip you to deal with more complex and larger scale data wran
 
 ## Project assignment 
 
-Use the `pivot_longer()` function to tidy your data and visualise it with {ggplot2}
+Use the various functions you've learned to tidy your data.
 
 <!-- Example from the video https://gist.github.com/charliejhadley/80e3182e76639022b08b75dfa426ff84 -->
