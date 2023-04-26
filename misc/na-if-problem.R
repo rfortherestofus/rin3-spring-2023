@@ -23,9 +23,10 @@ enrollment_17_18 %>%
   pivot_longer(cols = -district_id,
                names_to = "race_ethnicity",
                values_to = "number_of_students") %>% 
-  mutate(number_of_students = na_if(number_of_students, "-")) %>%
-  mutate(number_of_students = replace_na(number_of_students, 0)) %>%
-  # mutate(number_of_students = parse_number(number_of_students)) %>%
+  mutate(number_of_students = parse_number(number_of_students)) 
+%>%
+  # mutate(number_of_students = na_if(number_of_students, "-")) %>%
+  # mutate(number_of_students = replace_na(number_of_students, 0)) %>%
   mutate(race_ethnicity = str_remove(race_ethnicity, "x2017_18_")) %>% 
   mutate(race_ethnicity = case_when(
     race_ethnicity == "american_indian_alaska_native" ~ "American Indian Alaska Native",
@@ -48,9 +49,10 @@ enrollment_18_19 %>%
   pivot_longer(cols = -district_id,
                names_to = "race_ethnicity",
                values_to = "number_of_students") %>% 
-  mutate(number_of_students = na_if(number_of_students, "-")) %>%
-  mutate(number_of_students = replace_na(number_of_students, 0)) %>%
-  # mutate(number_of_students = parse_number(number_of_students)) %>%
+  mutate(number_of_students = parse_number(number_of_students)) %>%
+  # mutate(number_of_students = na_if(number_of_students, "-")) %>%
+  mutate(number_of_students = replace_na(number_of_students, 0))
+%>%
   mutate(race_ethnicity = str_remove(race_ethnicity, "x2018_19_")) %>% 
   mutate(race_ethnicity = case_when(
     race_ethnicity == "american_indian_alaska_native" ~ "American Indian Alaska Native",
