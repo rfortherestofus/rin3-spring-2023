@@ -1,0 +1,41 @@
+---
+title: "Week 4 Email"
+format: html
+---
+
+## Hello folks,
+
+It was nice to see everyone today. For those unable to join, [the recording is up on the course page](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/r-in-3-months-spring-2023-week-4-live-session/).
+
+**This Week**
+
+**\
+**
+
+In this week's live session, we talked about a few tips:
+
+-   Limiting code chunks to a single output
+
+-   Making nicely formatted values using the [scales package](https://scales.r-lib.org/)
+
+-   Saving your source, not your workspace (for more, see [this](https://rstats.wtf/save-source.html))
+
+I also did some live coding, showing how I would remake this data viz from the [Oregon by the Numbers report](http://tfff.org/obtn) I work on every year.
+
+https://show.rfor.us/hJFyQL
+
+Please remember that your data viz at this point need not be pretty. The most important thing is that you understand how ggplot works. Once you get the theory down, you can start to make nearly anything you want with it! 
+
+To see examples of what people make with ggplot, check out the [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) social data project. People get a new dataset each week, make dataviz from it, and [post it on social media](https://twitter.com/search?q=%23tidytuesday&src=typed_query).
+
+**Next Week**
+
+Next week is our first catch-up week. There is no new course assignment or project assignment. We will not be having a live session, though office hours will still happen on Tuesday at 12pm with Charlie. Please use this week to catch up on anything you're working on. We're happy to receive submissions whenever and get you feedback.
+
+Finally, as a reminder, you will have access to all R in 3 Months materials forever. If you don't get to everything during the time we work together or if you want to refer back to something later on, you'll be able to do that. 
+
+If you have any questions, please let me and Charlie know.
+
+Cheers,\
+\
+David

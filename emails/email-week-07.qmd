@@ -1,0 +1,66 @@
+---
+title: "Week 7 Email"
+format: html
+---
+
+Hello folks,
+
+It was nice to see you all this morning. [The recording and slides are up on the website](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/r-in-3-months-spring-2023-week-6-live-session/).
+
+**Session Recap**
+
+I hope our session going over a mish-mash of items and some Git and GitHub stuff was useful. We covered:
+
+-   When to put code in the console versus when to put it in your R/Rmd file
+
+-   Packages for making tables
+
+-   Making changes to multiple columns using the across() function
+
+-   A common issue where bars are too long because values in the same category are stacked on top of each other
+
+-   My suggestion to avoid using theme_ipsum() if you have trouble with fonts (I suggested using theme_minimal() instead). Fonts are hard in R, but there have been changes and you'll learn about them in a [future lesson](https://rfortherestofus.com/courses/r-in-3-months-spring-2023/lessons/customize-your-fonts/).
+
+-   How to format text in charts using the ggtext package (again, you'll learn more about this later in R in 3 Months)
+
+-   Conditionally manipulating variables using the if_else() function
+
+On Git and GitHub, we discussed:
+
+-   Making sure you always work in a project
+
+-   Making sure to save files before you commit them
+
+-   Making sure to select all files you want to commit
+
+-   How to explore GitHub repos
+
+-   How to use README files
+
+We also touched briefly on some more advanced GitHub concepts (issues, publishing HTML files automatically, etc). Those are covered in the later section of the [Using Git and GitHub course](https://rfortherestofus.com/courses/git-github/). You should all now have access to that course. If you don't, please let me know.
+
+**Next Week**
+
+Next week you'll be doing lessons on advanced data wrangling. The main concept you'll be covering is [tidy data](https://tidyr.tidyverse.org/articles/tidy-data.html). It seems like a simple concept, but it can be quite confusing! [This tweet thread with illustrations demonstrating tidy data is really helpful](https://twitter.com/juliesquid/status/1315710359404113920).
+
+You do not have a project assignment, but please start to think about how the data you are working with follows tidy data principles (or does not).
+
+**Logistics**
+
+Finally, a few logistics:
+
+-   There will be one more catch-up week in week 10
+
+-   Next week is the last office hours session. If you have questions, you can email me or Charlie at any time.
+
+-   You can schedule a 30-minute 1-on-1 with Charlie any time between now and the end of June using [this link](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat). This is a good opportunity to ask larger questions you may have about your own work with R. 
+
+-   You can submit any assignments for feedback before end of June
+
+-   You'll have access to materials forever
+
+If you have any questions, please don't hesitate to reach out. 
+
+Cheers,\
+\
+David
