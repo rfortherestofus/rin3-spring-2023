@@ -36,7 +36,7 @@ library(janitor)
 
 --
 
-1. Exercise
+1. Guided Exercise
 
 --
 
@@ -247,11 +247,11 @@ relig_income %>%
 
 class: inverse, center, middle
 
-# Exercise
+# Guided Exercise
 
 ---
 
-## Exercise
+## Guided Exercise
 
 Copy the code from [this gist](https://gist.githubusercontent.com/dgkeyes/1d5ceb8b607266f1d197a218dd5c6882/raw/3591c9dc6e02ee78e3471bc40753cc948456c4d1/tidy-data-exercise.R) into a new R script file. Then tidy the `gapminder_wide` data.
 
