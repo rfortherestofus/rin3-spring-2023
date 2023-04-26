@@ -114,18 +114,15 @@ From the [tidy data vignette](https://tidyr.tidyverse.org/articles/tidy-data.htm
 
 # Tidy data and `ggplot2`
 
-`ggplot` needs data in a tidy format. This dataset is the exact opposite of what {ggplot2} needs for a bar chart.
+`ggplot2` needs data in a tidy format. This dataset is the exact opposite of what `ggplot2` needs for a bar chart.
 
 ```{r, echo=FALSE}
-set.seed(187)
-donor_data <- tibble(
-  patient_id = 1:10,
-  type = c(sample(c("A", "B", "C"), 10, replace = TRUE)),
-  donor_1 = round(runif(10, 500, 600)),
-  donor_2 = round(rnorm(10, 300, 50)),
-  donor_3 = round(runif(10, 900, 1000))
-)
-donor_data
+gapminder_wide <- read_csv("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv")
+
+gdp_wide <- gapminder_wide %>% 
+  select(country, contains("gdp"))
+
+gdp_wide
 ```
 
 ---
@@ -135,8 +132,13 @@ donor_data
 The previous dataset is wide. What `ggplot2` needs is long.
 
 ```{r, echo=FALSE}
-donor_data %>% 
-  pivot_longer(cols = -c(patient_id, type))
+gdp_long <- gdp_wide %>% 
+  pivot_longer(cols = -country,
+               names_to = "year",
+               values_to = "gdp") %>% 
+  mutate(year = parse_number(year))
+
+gdp_long
 ```
 
 ---
