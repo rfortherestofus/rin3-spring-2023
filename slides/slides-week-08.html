@@ -103,9 +103,52 @@ class: inverse, center, middle
 
 ---
 
-## separate()
+class: inverse, center, middle
+background-image: url("images/broken-screen.jpg")
 
-The `separate()` function is useful when a column contains **multiple variables**.
+# We need to talk about how packages evolve
+
+---
+
+# Package lifecycles
+
+Infrequently, the folks managing the tidyverse choose to **supercede** old functions with new **experimental** functions.
+
+We're going to look at two functions that are undergoing this process - `separate()` and `separate_rows()`.
+
+The documentation is the primary way you'll learn of lifecycle changes.
+
+&lt;img src='images/separate-changes.jpg'/&gt;
+
+---
+
+# Don't Panic
+
+This is a rare process and does not mean old code will stop working. 
+
+Old functions will remain, but the new functions are always designed with the user in mind.
+
+We recommend learning the new functions now as the documentation and future material you'll find will use it.
+
+---
+
+# Okay - but why this change?
+
+For consistency!!!
+
+A few years ago `gather()` and `spread()` were renamed to `pivot_longer()` and `pivot_wider()` to make their connection tidy data more explicit.
+
+The `separate()` and `separate_rows()` functions are very similiar in that one makes data wider and the other makes it longer:
+
+- `separate()` is becoming `separate_wider_*()`
+
+- `separate_rows()` is becoming `separate_longer_*()`
+
+---
+
+## separate_wider_delim()
+
+The `separate_wider_delim()` function is useful when a column contains **multiple variables** split by a common set of characters.
 
 
 ```r
@@ -127,15 +170,14 @@ location_data
 
 ---
 
-## separate()
+## separate_wider_delim()
 
 
 ```r
 location_data %&gt;% 
-  separate(col = address,
-           into = c("city",
-                    "country"),
-           sep = ", ")
+  separate_wider_delim(address,
+                       delim = ", ",
+                       names = c("city", "country"))
 ```
 
 &lt;div data-pagedtable="false"&gt;
@@ -146,13 +188,13 @@ location_data %&gt;%
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
-The `separate_rows()` function is useful when a column contains **multiple observations of the same variable**.
+The `separate_longer_delim()` function is useful when a column contains **multiple observations of the same variable**.
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
 Which of these devices do you own? Please select all that apply.
 
@@ -177,13 +219,13 @@ device_ownership
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
 
 ```r
 device_ownership %&gt;% 
-  separate_rows(devices_owned,
-                sep = ", ")
+  separate_longer_delim(devices_owned,
+                        delim = ", ")
 ```
 
 &lt;div data-pagedtable="false"&gt;
@@ -219,7 +261,7 @@ class: inverse, center, middle
 
 class: middle
 
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">I&#39;m writing a blogpost on tidying multiple choice survey questions with {tidyr}.<br><br>Could you help by completing these &lt;1min surveys?<a href="https://t.co/n4o50idCCq">https://t.co/n4o50idCCq</a><a href="https://t.co/ouqi3k7EZL">https://t.co/ouqi3k7EZL</a><a href="https://t.co/UtsRxsJ8HR">https://t.co/UtsRxsJ8HR</a> <a href="https://t.co/Y6FzT37CUH">pic.twitter.com/Y6FzT37CUH</a></p>&mdash; Charlotte 🐀 (@charliejhadley) <a href="https://twitter.com/charliejhadley/status/1519696924328214528?ref_src=twsrc%5Etfw">April 28, 2022</a></blockquote>
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">I&#39;m writing a blogpost on tidying multiple choice survey questions with {tidyr}.<br><br>Could you help by completing these &lt;1min surveys?<a href="https://t.co/n4o50idCCq">https://t.co/n4o50idCCq</a><a href="https://t.co/ouqi3k7EZL">https://t.co/ouqi3k7EZL</a><a href="https://t.co/UtsRxsJ8HR">https://t.co/UtsRxsJ8HR</a> <a href="https://t.co/Y6FzT37CUH">pic.twitter.com/Y6FzT37CUH</a></p>&mdash; @charliejhadley@tech.lgbt (@charliejhadley) <a href="https://twitter.com/charliejhadley/status/1519696924328214528?ref_src=twsrc%5Etfw">April 28, 2022</a></blockquote>
 
 
 ---

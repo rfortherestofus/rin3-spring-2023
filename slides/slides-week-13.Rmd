@@ -320,7 +320,17 @@ class: inverse, center, middle
 
 ---
 
-## Annotated barchart
+## Bars vs Lines
+
+Amy produced this very clean faceted bar chart.
+
+In general, in data visualisation we recommend using line charts for time series.... however, there are some [nuances to that](https://academy.datawrapper.de/article/129-what-to-consider-when-creating-line-charts).
+
+<img src='images/amy-lines-vs-bars.jpg'/>
+
+---
+
+## Annotated barchart [OLD]
 
 ```{r, include=FALSE}
 # Charlie will use this 
@@ -345,7 +355,7 @@ msleep %>%
 
 ---
 
-## Ordered faceted chart
+## Ordered faceted chart [OLD]
 
 <img src='images/example_eva.png' height='500px'/>
 
@@ -364,18 +374,20 @@ gapminder %>%
 
 ---
 
-## Dumbell chart
+## Dumbell chart[OLD]
 
 <img src='images/example_dumbell-chart.png' height='500px'/>
 
 ---
 
-## ggtext title
+## ggtext title[OLD]
 
 <img src='images/example_hsin-yi.png' height='500px'/>
 
 
 class: inverse, center, middle
+
+
 
 # What happens next
 

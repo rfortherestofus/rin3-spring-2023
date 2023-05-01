@@ -107,9 +107,52 @@ class: inverse, center, middle
 
 ---
 
-## separate()
+class: inverse, center, middle
+background-image: url("images/broken-screen.jpg")
 
-The `separate()` function is useful when a column contains **multiple variables**.
+# We need to talk about how packages evolve
+
+---
+
+# Package lifecycles
+
+Infrequently, the folks managing the tidyverse choose to **supercede** old functions with new **experimental** functions.
+
+We're going to look at two functions that are undergoing this process - `separate()` and `separate_rows()`.
+
+The documentation is the primary way you'll learn of lifecycle changes.
+
+<img src='images/separate-changes.jpg'/>
+
+---
+
+# Don't Panic
+
+This is a rare process and does not mean old code will stop working. 
+
+Old functions will remain, but the new functions are always designed with the user in mind.
+
+We recommend learning the new functions now as the documentation and future material you'll find will use it.
+
+---
+
+# Okay - but why this change?
+
+For consistency!!!
+
+A few years ago `gather()` and `spread()` were renamed to `pivot_longer()` and `pivot_wider()` to make their connection tidy data more explicit.
+
+The `separate()` and `separate_rows()` functions are very similiar in that one makes data wider and the other makes it longer:
+
+- `separate()` is becoming `separate_wider_*()`
+
+- `separate_rows()` is becoming `separate_longer_*()`
+
+---
+
+## separate_wider_delim()
+
+The `separate_wider_delim()` function is useful when a column contains **multiple variables** split by a common set of characters.
 
 ```{r, eval=TRUE}
 location_data <- tribble(
@@ -124,25 +167,24 @@ location_data
 
 ---
 
-## separate()
+## separate_wider_delim()
 
 ```{r, eval=TRUE}
 location_data %>% 
-  separate(col = address,
-           into = c("city",
-                    "country"),
-           sep = ", ")
+  separate_wider_delim(address,
+                       delim = ", ",
+                       names = c("city", "country"))
 ```
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
-The `separate_rows()` function is useful when a column contains **multiple observations of the same variable**.
+The `separate_longer_delim()` function is useful when a column contains **multiple observations of the same variable**.
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
 Which of these devices do you own? Please select all that apply.
 
@@ -160,12 +202,12 @@ device_ownership
 
 ---
 
-## separate_rows()
+## separate_longer_delim()
 
 ```{r, eval=TRUE, echo=TRUE}
 device_ownership %>% 
-  separate_rows(devices_owned,
-                sep = ", ")
+  separate_longer_delim(devices_owned,
+                        delim = ", ")
 ```
 
 ---
