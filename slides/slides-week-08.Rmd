@@ -63,6 +63,20 @@ Other types of tidy data - surveys! separate()
 
 # Housekeeping
 
+GH Desktop
+
+--
+
+Can submit assignments as gists
+
+--
+
+Office hours
+
+--
+
+1-on-1's with Charlie
+
 
 ---
 
@@ -142,7 +156,7 @@ For consistency!!!
 
 A few years ago `gather()` and `spread()` were renamed to `pivot_longer()` and `pivot_wider()` to make their connection tidy data more explicit.
 
-The `separate()` and `separate_rows()` functions are very similiar in that one makes data wider and the other makes it longer:
+The `separate()` and `separate_rows()` functions are very similar in that one makes data wider and the other makes it longer:
 
 - `separate()` is becoming `separate_wider_*()`
 
