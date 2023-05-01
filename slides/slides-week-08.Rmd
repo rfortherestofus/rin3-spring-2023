@@ -150,7 +150,7 @@ We recommend learning the new functions now as the documentation and future mate
 
 ---
 
-# Okay - but why this change?
+# Ok, but why this change?
 
 For consistency!!!
 
@@ -260,7 +260,7 @@ tweet_embed("https://twitter.com/charliejhadley/status/1519696924328214528",
 
 # Let's tidy the survey data!
 
-David and I will take turns to read in and tidy the survey data from:
+Let's read in and tidy the survey data from:
 
 - Survey Monkey
 
@@ -284,7 +284,7 @@ This is a really powerful part of learning a programming language like R. They a
 
 - Clean data files that share the same format (eg yearly reports)
 
-- Create data visualisations of different subsets of your data, eg a line chart showing visitor numbers for each exhibit
+- Create data visualizations of different subsets of your data, eg a line chart showing visitor numbers for each exhibit
 
 - Generate the same report - including lots of different kinds of charts and tables - different subsets of data. This is something we do in consulting projects, eg for [ORS Impact Reports](https://funderscommittee.org/2020censusstatereports/).
 
@@ -298,8 +298,8 @@ class: inverse, center, middle
 
 # Next week
 
-- Advanced data visualisation with {ggplot2}, including using {ggtext} for direct labelling
+- Advanced data visualisation with {ggplot2}, including using {ggtext} for direct labeling
 
 - No new project assignment
 
-- The week of Monday 21st November is another catch-up week
+- The week of May 8 is another catch-up week
