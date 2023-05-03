@@ -45,15 +45,11 @@ Other types of tidy data - surveys! separate()
 
 --
 
-1. One tip
-
---
-
 1. Other functions for tidying data
 
 --
 
-1. David and Charlie tidy survey data
+1. Tidying survey data
 
 --
 
@@ -63,7 +59,9 @@ Other types of tidy data - surveys! separate()
 
 # Housekeeping
 
-GH Desktop
+--
+
+GitHub Desktop
 
 --
 
@@ -75,46 +73,10 @@ Office hours
 
 --
 
-1-on-1's with Charlie
-
-
----
-
-class: inverse, center, middle
-
-# One tip
+[1-on-1's with Charlie](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat)
 
 ---
 
-## pivot_longer() complains it can't combine
-
-Often you'll see this error:
-
-```{r}
-# Error in `pivot_longer_spec()`:
-#
-# ! Can't combine `ACO1` <double> and `ACO13` <character>.
-# Run `rlang::last_error()` to see where the error occurred.
-```
-
-Let's walk through an example
-
----
-
-## pivot_longer() complains it can't combine
-
-We want to combine together all of the columns from `ACO1:ACO28`
-
-```{r message=FALSE, warning=FALSE, echo=FALSE}
-data_performance <- read_csv(here::here("data", "Performance_Year_Financial_and_Quality_Results_2020.csv")) %>% 
-  select(contains(c("ACO"))) %>% 
-  mutate(across(ACO1:ACO28,
-                ~  ifelse(.x %in% c("^", "~", "-"), 0, .x))) 
-data_performance
-```
-
-
----
 class: inverse, center, middle
 
 # Other functions for tidying data
@@ -298,8 +260,8 @@ class: inverse, center, middle
 
 # Next week
 
-- Advanced data visualisation with {ggplot2}, including using {ggtext} for direct labeling
+- Catch-up week
 
-- No new project assignment
+--
 
-- The week of May 8 is another catch-up week
+- [Remember you have a 1-on-1 with Charlie](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat)
