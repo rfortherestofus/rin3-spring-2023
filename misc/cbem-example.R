@@ -100,7 +100,7 @@ cbem_race_ethnicity_colors <- c(
   "Black or African American" = "#477A3E",
   "White" = "#6CC5E9",
   "Hispanic or Latino" = "#ff7400"
-) +
+)
   
   
 

@@ -1,0 +1,26 @@
+---
+title: "email-week-09"
+format: html
+---
+
+Hello folks,
+
+Although we did not have a live session today, we do have some new material on the schedule. Starting today through next week, you will be learning about advanced data viz. The data viz lessons from Fundamentals of R taught you how to make basic plots with ggplot. The data viz lessons from Going Deeper with R will teach you how to make high-quality plots. 
+
+For week 10, you'll learn about things like using color to highlight your findings, decluttering your charts, formatting values nicely with the scales package, and more. There is no project assignment in week 10, but looking ahead to week 11 you will be asked to improve a chart you made previously so you may want to begin thinking about that. 
+
+I really love making data viz in R and I hope you do too. It can be challenging starting out, but ggplot's flexibility is really unmatched. You can make anything with ggplot. If you want to be inspired, check out these three repositories:
+
+-   [Cedric Scherer](https://github.com/z3tt/TidyTuesday)
+
+-   [Cara Thompson](https://github.com/cararthompson/tidytuesdays)
+
+-   [Tanya Shapiro](https://github.com/tashapiro/TidyTuesday)
+
+All three repositories have data viz and the code used to make them. They are part of [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday), a social data project that releases data each week for people to analyze and visualize. Take a look at the viz to be inspired and then look at the code to learn how they made each one. It's such a great benefit of R being open source!
+
+If you have any questions, please don't hesitate to reach out.
+
+Cheers,\
+\
+David
