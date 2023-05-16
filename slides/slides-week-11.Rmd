@@ -1,5 +1,5 @@
 ---
-title: "R in 3 Months<br>Week 11<br>Advanced Data Viz Part 2"
+title: "R in 3 Months<br>Week 10<br>Advanced Data Viz Part 2"
 output:
   xaringan::moon_reader:
     css: ["style.css", "default"]
@@ -56,7 +56,7 @@ class: inverse, center, middle
 
 ## 1:1 with Charlie
 
-[Book another 1:1 with Charlie in January](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/2nd-1to1-jan-2023)
+[Book a 1:1 with Charlie between now and June](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/2nd-1to1-jan-2023)
 
 
 ---

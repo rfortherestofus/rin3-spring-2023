@@ -1,5 +1,5 @@
 ---
-title: "Rin3 Months<br>Week 09<br>Advanced Data Viz Part 1"
+title: "Rin3 Months<br>Week 10<br>Advanced Data Viz Part 1"
 output:
   xaringan::moon_reader:
     css: ["style.css", "default"]
@@ -46,23 +46,9 @@ class: inverse, center, middle
 
 ---
 
-## Remaining Schedule
-
-- Week 10 (2022/11/17): Official Assignment Amnesty!
-
-- Week 11 (2022/12/01): Advanced data viz, part 2
-
-- Week 12 (2022/12/08): Advanced RMarkdown
-
-- Week 13 (2022/12/15): Wrap-up
-
----
-
 ## 1:1 with Charlie
 
-Folks are still booking in their first 1:1 session due to time constraints and how popular popular both VSA R and R in 3 Months has been.
-
-We've decided to offer you a 2nd 1:1 session with Charlie in January - [2nd 1:1 with Charlie](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/2nd-1to1-jan-2023)
+You can use this link [https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat) to book a 1:1 with Charlie between now and the end of June.
 
 This will provide you the opportunity to use some of what you've learned before booking in your 1:1.
 
@@ -70,9 +56,7 @@ This will provide you the opportunity to use some of what you've learned before 
 
 ## Deadline for Feedback
 
-Charlie will provide feedback for submissions made before December 31
-
---
+Charlie will provide feedback for submissions made before June 30th
 
 You'll have access to materials FOREVER
 
