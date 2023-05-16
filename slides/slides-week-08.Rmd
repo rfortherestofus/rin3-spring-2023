@@ -45,15 +45,11 @@ Other types of tidy data - surveys! separate()
 
 --
 
-1. One tip
-
---
-
 1. Other functions for tidying data
 
 --
 
-1. David and Charlie tidy survey data
+1. Tidying survey data
 
 --
 
@@ -63,44 +59,24 @@ Other types of tidy data - surveys! separate()
 
 # Housekeeping
 
+--
+
+GitHub Desktop
+
+--
+
+Can submit assignments as gists
+
+--
+
+Office hours
+
+--
+
+[1-on-1's with Charlie](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat)
 
 ---
 
-class: inverse, center, middle
-
-# One tip
-
----
-
-## pivot_longer() complains it can't combine
-
-Often you'll see this error:
-
-```{r}
-# Error in `pivot_longer_spec()`:
-#
-# ! Can't combine `ACO1` <double> and `ACO13` <character>.
-# Run `rlang::last_error()` to see where the error occurred.
-```
-
-Let's walk through an example
-
----
-
-## pivot_longer() complains it can't combine
-
-We want to combine together all of the columns from `ACO1:ACO28`
-
-```{r message=FALSE, warning=FALSE, echo=FALSE}
-data_performance <- read_csv(here::here("data", "Performance_Year_Financial_and_Quality_Results_2020.csv")) %>% 
-  select(contains(c("ACO"))) %>% 
-  mutate(across(ACO1:ACO28,
-                ~  ifelse(.x %in% c("^", "~", "-"), 0, .x))) 
-data_performance
-```
-
-
----
 class: inverse, center, middle
 
 # Other functions for tidying data
@@ -136,13 +112,13 @@ We recommend learning the new functions now as the documentation and future mate
 
 ---
 
-# Okay - but why this change?
+# Ok, but why this change?
 
 For consistency!!!
 
 A few years ago `gather()` and `spread()` were renamed to `pivot_longer()` and `pivot_wider()` to make their connection tidy data more explicit.
 
-The `separate()` and `separate_rows()` functions are very similiar in that one makes data wider and the other makes it longer:
+The `separate()` and `separate_rows()` functions are very similar in that one makes data wider and the other makes it longer:
 
 - `separate()` is becoming `separate_wider_*()`
 
@@ -233,6 +209,7 @@ class: inverse, center, middle
 
 # Multiple choice survey questions
 
+
 ---
 
 class: middle
@@ -246,7 +223,7 @@ tweet_embed("https://twitter.com/charliejhadley/status/1519696924328214528",
 
 # Let's tidy the survey data!
 
-David and I will take turns to read in and tidy the survey data from:
+Let's read in and tidy the survey data from:
 
 - Survey Monkey
 
@@ -270,7 +247,7 @@ This is a really powerful part of learning a programming language like R. They a
 
 - Clean data files that share the same format (eg yearly reports)
 
-- Create data visualisations of different subsets of your data, eg a line chart showing visitor numbers for each exhibit
+- Create data visualizations of different subsets of your data, eg a line chart showing visitor numbers for each exhibit
 
 - Generate the same report - including lots of different kinds of charts and tables - different subsets of data. This is something we do in consulting projects, eg for [ORS Impact Reports](https://funderscommittee.org/2020censusstatereports/).
 
@@ -284,8 +261,8 @@ class: inverse, center, middle
 
 # Next week
 
-- Advanced data visualisation with {ggplot2}, including using {ggtext} for direct labelling
+- Catch-up week
 
-- No new project assignment
+--
 
-- The week of Monday 21st November is another catch-up week
+- [Remember you have a 1-on-1 with Charlie](https://savvycal.com/charliejhadley-r-for-the-rest-of-us/chat)
