@@ -82,14 +82,14 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Example Data Viz with `{ggtext}`
+# Example Data Viz with `ggtext`
 
 ---
 
-## Dumbbell charts and {ggtext}
+## Dumbbell charts and `ggtext`
 
 .pull-left[
-Let's walk through building this beautiful chart from [Stephanie Evergeen](https://stephanieevergreen.com/easy-dot-plots-in-excel/) in {ggplot2}.
+Let's walk through building this chart from [Stephanie Evergeen](https://stephanieevergreen.com/easy-dot-plots-in-excel/) in {ggplot2}.
 
 This is a dumbell chart that uses colour in the title in place of a legend. We can do this using {ggtext}
 
@@ -101,11 +101,21 @@ This is a dumbell chart that uses colour in the title in place of a legend. We c
 
 ---
 
+## First, let's wrangle the data
+
+Code the copy from [here](https://raw.githubusercontent.com/rfortherestofus/rin3-spring-2023/main/misc/stephanie-evergreen-ggtext.R) and wrangle your data into the format needed to make the plot
+
+--
+
+If you have time, start to make the plot
+
+---
+
 ## Doing even more with `{ggtext}`
 
 .pull-left[
 
-Our colleague Cara Thompson ran an incredible workshop at NHS-R in November 2022 about levelling up your charts [with {ggtext}].
+Our colleague Cara Thompson ran an incredible workshop at NHS-R in November 2022 about leveling up your charts [with {ggtext}].
 
 &lt;br&gt;
 
@@ -119,42 +129,6 @@ You can watch the video and view Cara's slides [on her website](https://www.cara
 
 
 
----
-
-class: inverse, center, middle
-
-# Group work
-
----
-
-## Group work
-
---
-
-Your task is decipher how I made [this graph](https://share.rfor.us/v1ub7qWe)
-
-![](https://p218.p3.n0.cdn.getcloudapp.com/items/v1ub7qWe/1633a0d2-bde3-405a-8a91-cebf912a1809.jpg?source=viewer&amp;v=362ab84fc710116e10f7aa692d1ed927)
-
---
-
-- Why is the y aesthetic property set to 1?
-
---
-
-- What does shape = 124 do?
-
---
-
-- What does geom_hline() do in this viz?
-
---
-
-- Why do I have to specifically add x axis text using the line `theme(axis.text.x = element_text(color = "grey80")`)?
-
---
-
-[Link to starter code](https://gist.githubusercontent.com/dgkeyes/8e6ae05003dac8fc6a928a9d1230f955/raw/d23ea91d8a7f2d5f1c10ce410a39ca057daba268/data-viz-exercise.R)
-
 
 ---
 
@@ -163,6 +137,10 @@ Your task is decipher how I made [this graph](https://share.rfor.us/v1ub7qWe)
 --
 
 Course assignment: Complete lessons on advanced RMarkdown
+
+--
+
+I'll demonstrate parameterized reporting during our live session
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
