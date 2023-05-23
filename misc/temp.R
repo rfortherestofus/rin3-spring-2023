@@ -1,77 +1,46 @@
-library(tidyverse)
-library(palmerpenguins)
+kindergarten_readiness <- tribble(
+  ~subject, ~score, ~date,
+  "Literacy", 34, "Fall",
+  "Literacy", 69, "Spring",
+  "Language", 67, "Fall",
+  "Language", 75, "Spring",
+  "Mathematics", 63, "Fall",
+  "Mathematics", 77, "Spring",
+  "Science", 92, "Fall",
+  "Science", 98, "Spring",
+  "Creative Arts", 96, "Fall",
+  "Creative Arts", 100, "Spring"
+) %>% 
+  mutate(subject = factor(subject,
+                          levels = c("Literacy", "Language", "Mathematics", "Science", "Creative Arts"))) %>% 
+  mutate(subject = fct_rev(subject))
 
-penguins %>% 
-  summarize(mean_bill_length = mean(bill_length_mm,
-                                    na.rm = TRUE)) %>% 
-  summarize(mean_bill_depth = mean(bill_depth_mm,
-                                   na.rm = TRUE))
+subject_labels <- kindergarten_readiness %>% 
+  filter(date == "Fall")
 
-
-penguins %>% 
-  summarize(mean_bill_length = mean(bill_length_mm,
-                                    na.rm = TRUE),
-            mean_bill_depth = mean(bill_depth_mm,
-                                   na.rm = TRUE)) 
-
-
-penguins
-
-penguins %>% 
-  mutate(not_actually_na = "NA") %>% 
-  drop_na(not_actually_na)
-
-read_csv("data/penguins.csv",
-         na = c("male", ""))
-
-
-msleep %>% 
-  select(name, conservation) %>% 
-  mutate(conservation = replace_na(conservation, "unknown"))
-
-starwars %>%
-  select(name, eye_color) %>%
-  mutate(eye_color = na_if(eye_color, "unknown")) %>% 
-  view()
-
-starwars %>%
-  select(name, eye_color) %>%
-  mutate(random_variable = NA_integer_) %>% 
-  mutate(random_variable = replace_na(random_variable, 0))
-  view()
-  
-starwars %>% 
-  filter(hair_color %in% c("blond", "black"))
-
-starwars %>% 
-  filter(hair_color == "brown")
-
-starwars %>% 
-  filter(str_detect(string = hair_color,
-                    pattern = "brown"))
-
-starwars %>% 
-  select(contains("color"))
-
-install.packages("gt")
-
-
-
-
-library(tidyverse)
-library(tidycensus)
-library(janitor)
-
-get_acs(year = 2019,
-        geography = "county",
-        geometry = TRUE,
-        state =  "OR",
-        variables = "B01003_001") %>% 
-  clean_names() %>% 
-  mutate(
-    name = str_remove(name, " County")) %>% 
-  rename(poulation = estimate,
-         county = name) %>% 
-  select(county, population)
-
-
+kindergarten_readiness %>%
+  ggplot(aes(x = score,
+             y = subject,
+             color = date,
+             label = score)) +
+  geom_point(size = 8) +
+  geom_text(color = "white") +
+  geom_text(data = subject_labels,
+            aes(label = subject),
+            hjust = 1.5) +
+  scale_color_manual(values = c(
+    "Fall" = "#867c84",
+    "Spring" = "#c15250"
+  )) +
+  scale_x_continuous(limits = c(0, 100),
+                     breaks = seq(from = 0,
+                                  to = 100,
+                                  by = 10)) +
+  labs(title = "Kindergarten readiness increased between <span style='color: #867c84;'>Fall</span> and <span style='color: #be5250;'>Spring</span>") +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        axis.title = element_blank(),
+        plot.title = element_markdown(),
+        axis.text.y = element_blank(),
+        legend.position = "none")
