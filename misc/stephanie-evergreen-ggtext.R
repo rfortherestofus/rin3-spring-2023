@@ -2,7 +2,6 @@
 
 library(tidyverse)
 library(ggtext)
-library(readxl)
 
-read_excel("https://github.com/rfortherestofus/rin3-spring-2023/raw/main/data/kindergarten-readiness.xlsx")
+read_csv("https://github.com/rfortherestofus/rin3-spring-2023/raw/main/data/kindergarten-readiness.csv")
 
