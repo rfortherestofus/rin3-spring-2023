@@ -11,7 +11,7 @@ output:
       countIncrementalSlides: false
       ratio: 16:9
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r, include=FALSE, eval = TRUE}
@@ -39,10 +39,6 @@ library(ggtext)
 
 --
 
-1. Group work
-
---
-
 1. Next week
 
 ---
@@ -65,22 +61,21 @@ class: inverse, center, middle
 
 --
 
-- Week 12
+Week 12
 
-  - Live session (May 31st)
+- Live session (May 31st)
   
 --
   
-- Week 13
+Week 13
 
-  
-  - Last Live session (June 7th)
+- Last Live session (June 7th)
 
 --
 
-- Assignments
+Assignments
 
-  - Please submit before end of June
+- Please submit before end of June
 
 ---
 
@@ -130,6 +125,25 @@ You can watch the video and view Cara's slides [on her website](https://www.cara
 .pull-right[
 <img src='images/penguin-bakeoff.png' height='400px'/>
 ]
+
+
+```{r}
+library(tidyverse)
+library(ggtext)
+library(janitor)
+
+read_csv("https://github.com/rfortherestofus/rin3-spring-2023/raw/main/data/kindergarten-readiness.csv") %>% 
+  clean_names() %>% 
+  pivot_longer(cols = -subject,
+               names_to = "season",
+               values_to = "percent") %>% 
+  ggplot(aes(x = percent,
+             y = subject,
+             color = season)) +
+  geom_point() +
+  theme_minimal()
+```
+
 
 
 ---
