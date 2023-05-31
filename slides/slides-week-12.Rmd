@@ -30,10 +30,6 @@ library(ggtext)
 
 # Agenda
 
-1. Housekeeping
-
---
-
 1. What else can RMarkdown do?
 
 --
@@ -46,7 +42,7 @@ library(ggtext)
 
 --
 
-1. Final week: let's see what you did!
+1. Final week
 
 ---
 
